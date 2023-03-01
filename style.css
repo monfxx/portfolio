@@ -1,3 +1,7 @@
+.main {
+    display:flex;
+    flex-direction: column;
+}   
 .container {
     display: flex;
     flex-direction: column;
@@ -151,36 +155,54 @@ ion-icon {
     text-align: justify;
     max-width: 800px;
     margin-top: 2px;
-    margin-bottom: 12px;
+    margin-bottom: 48px;
     align-self: flex-start;
-    
-}
-.proj-list {
-    display: flex;
-    flex-direction: row;
-}
-.proj-list li {
-    display: flex;
 }
 
-.proj-list li a {
+
+.email-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin-top: 12px;
+    margin-bottom: 48px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+.email-container h3 {
+    font-size: 36px;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 2px;
+    margin-bottom: 12px;
+}
+.email-container label {
     display: flex;
 }
-
-.proj-list li img {
-    display: flex;
-    max-width: 100px;
+.email-container button {
     margin-top: 24px;
-    max-height: 50px;
-    /* Set the desired height of the image */
-    object-fit: contain;
-    margin-right: 24px;
+    width: 5rem;
 }
 
+.ft-message {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+    font-size: small;
+}
+.credit {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: px;
+}
 
-
-
-
+a:link {
+    text-decoration: none;
+    color:blue
+}
 
 /*MEDIA QUERIES*/
 
