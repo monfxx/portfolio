@@ -1,6 +1,8 @@
-.main {
+body {
     display:flex;
     flex-direction: column;
+    background-color: #EEEEEE;
+    font-family: 'Assistant', sans-serif;
 }   
 .container {
     display: flex;
@@ -15,7 +17,17 @@
     flex-direction: column;
     align-items: center;
 }
-
+.current-job {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.current-job h4{
+    font-weight: 400;
+    font-size: medium;
+    color: gray;
+    letter-spacing: 1.5px;
+}
 .profile-photo {
     width: 150px;
     height: 150px;
@@ -24,8 +36,10 @@
     /* Adds a 24px margin below the profile photo */
 }
 
+
 .name {
     margin-top: 8px;
+    text-align: center;
     /* Adds a 24px margin above the h2 element */
 }
 
@@ -38,7 +52,7 @@
 .job {
     font-size: 16px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .links {
@@ -66,7 +80,7 @@ ion-icon {
 }
 
 .links .github {
-    color: #211f1f;
+    color: #505050;
 }
 
 #about {
@@ -75,7 +89,7 @@ ion-icon {
     align-items: flex-start;
     justify-content: center;
     margin-top: 48px;
-    margin-bottom: 48px;
+    margin-bottom: 12px;
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
@@ -91,11 +105,12 @@ ion-icon {
 
 .description {
     font-size: 12;
-    line-height: 1;
+    line-height: 1.2;
     text-align: justify;
+    text-justify: inter-word;
     max-width: 800px;
     margin-top: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
     align-self: flex-start;
 }
 
@@ -105,7 +120,7 @@ ion-icon {
     align-items: left;
     justify-content: center;
     margin-top: 12px;
-    margin-bottom: 48px;
+    margin-bottom: 12px;
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
@@ -121,7 +136,34 @@ ion-icon {
 
 .exp-desc {
     font-size: 12;
-    line-height: 1;
+    line-height: 1.2;
+    text-align: justify;
+    max-width: 800px;
+    margin-top: 2px;
+    margin-bottom: 12px;
+    align-self: flex-start;
+}
+.education {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+.education h4 {
+    font-size: 36px;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 2px;
+    margin-bottom: 12px;
+}
+.education p {
+    font-size: 12;
+    line-height: 1.2;
     text-align: justify;
     max-width: 800px;
     margin-top: 2px;
@@ -135,7 +177,7 @@ ion-icon {
     align-items: left;
     justify-content: center;
     margin-top: 12px;
-    margin-bottom: 48px;
+    margin-bottom: 12px;
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
@@ -151,7 +193,7 @@ ion-icon {
 
 .proj-desc {
     font-size: 12;
-    line-height: 1;
+    line-height: 1.2;
     text-align: justify;
     max-width: 800px;
     margin-top: 2px;
@@ -160,31 +202,7 @@ ion-icon {
 }
 
 
-.email-container{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
-    margin-top: 12px;
-    margin-bottom: 48px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-}
-.email-container h3 {
-    font-size: 36px;
-    font-weight: 400;
-    text-align: left;
-    margin-top: 2px;
-    margin-bottom: 12px;
-}
-.email-container label {
-    display: flex;
-}
-.email-container button {
-    margin-top: 24px;
-    width: 5rem;
-}
+
 
 .ft-message {
     display: flex;
@@ -201,8 +219,69 @@ ion-icon {
 
 a:link {
     text-decoration: none;
-    color:blue
 }
 
-/*MEDIA QUERIES*/
+/* The switch - the box around the slider */
+.switch {
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e6e6e6;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon,1.4em);
+    width: var(--size-of-icon,1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset,0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg,#ff9012,#f3f029 70%);
+    ;
+   transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #303136;
+  }
+  
+  input:checked + .slider:before {
+    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+    background: #303136;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+  }
 
+  #toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+  }
