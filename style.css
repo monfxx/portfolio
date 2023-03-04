@@ -232,6 +232,9 @@ ion-icon {
     font-size: small;
     
 }
+.ft-message a{
+    color: #004894;
+}
 
 footer a {
     text-decoration: none;
